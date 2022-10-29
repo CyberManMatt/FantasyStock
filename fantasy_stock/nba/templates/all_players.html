@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block doc_title %}Fantasy Stock | NBA Player Market{% endblock %}
+
+{% block css %}
+<!-- Datatables css -->
+<link href="/static/assets/vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+<link href="/static/assets/vendor/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+<li class="breadcrumb-item active">Player Market</li>
+{% endblock %}
+
+{% block page_title %}Player Market{% endblock %}
+
+{% block content %}
+<div class="table-responsive">
+    <table class="table dt-responsive nowrap w-100" id="players-datatable">
+        <thead class="table-light">
+            <tr>
+                <th>Player</th>
+                <th>Position</th>
+                <th>Team</th>
+                <th>Injury</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody id="players">
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block body_js %}
+<script src="/static/assets/js/pages/all_players.js"></script>
+
+<!-- Datatables js -->
+<script src="/static/assets/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="/static/assets/vendor/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+<script src="/static/assets/vendor/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="/static/assets/vendor/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
+
+<!-- Datatable Init js -->
+<script src="/static/assets/js/pages/demo.datatable-init.js"></script>
+{% endblock %}

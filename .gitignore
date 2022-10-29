@@ -30,3 +30,4 @@ fantasy_stock/fantasy_stock/settings.py
 fantasy_stock/db.sqlite3
 
 __pycache__/
+fantasy_stock/nba/static/assets/js/pages/key.js
